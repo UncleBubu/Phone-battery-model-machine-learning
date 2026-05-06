@@ -2,15 +2,15 @@ from flask import Flask, render_template, request
 import pickle
 import numpy as np
 import os
-print (os.getcwd)
-print("cake")
+#print (os.getcwd)
+#print("cake")
 
-app = Flask("__name__")
+app = Flask(__name__)
 
 with open("battery_percent_model.pkl","rb") as f:
     reg_model = pickle.load(f)
     
-with open("Crec_action_model.pkl","rb") as f:
+with open("rec_action_model.pkl","rb") as f:
     class_model = pickle.load(f)
     # rb = read binary wb = write binary
 with open("background_encoder.pkl","rb") as f:
