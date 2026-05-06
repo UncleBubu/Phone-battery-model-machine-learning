@@ -7,13 +7,13 @@ print("cake")
 
 app = Flask("__name__")
 
-with open(r"C:\Users\chukw\Documents\RAIN\AIML 2ND SEMESTER (File responses)\Rain Class\Week 12 Deployment\mainFolder\battery_percent_model.pkl","rb") as f:
+with open("battery_percent_model.pkl","rb") as f:
     reg_model = pickle.load(f)
     
-with open(r"C:\Users\chukw\Documents\RAIN\AIML 2ND SEMESTER (File responses)\Rain Class\Week 12 Deployment\mainFolder\rec_action_model.pkl","rb") as f:
+with open("Crec_action_model.pkl","rb") as f:
     class_model = pickle.load(f)
     # rb = read binary wb = write binary
-with open(r"C:\Users\chukw\Documents\RAIN\AIML 2ND SEMESTER (File responses)\Rain Class\Week 12 Deployment\mainFolder\background_encoder.pkl","rb") as f:
+with open("background_encoder.pkl","rb") as f:
     background_enc = pickle.load(f)
     
 @app.route('/',methods=["GET", "POST"])
